@@ -8,11 +8,10 @@ Java 虚拟机与 Java 语言并没有必然的联系，它只与特定的二进
 - 自动内存管理
 - 自动垃圾回收功能
 
-![JVM处在的位置](media/16043939725602/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-11-03%2020.58.18.png)
-==JVM运行在虚拟机上，与硬件没有直接的交互==
+![JVM处在的位置](media/初始JVM/JVM处在的位置.png)
 
 ## JVM的整体结构
-![JVM的整体结构](media/16043939725602/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-11-03%2021.03.14.png)
+![JVM的整体结构](media/初始JVM/JVM的整体结构.png)
 
 
 Java 编译器输入的指令流基本上是一种==基于栈的指令集架构==，另外一种指令集架构则是==基于寄存器的指令集架构==。具体来说：这两种架构之间的区别
@@ -43,7 +42,7 @@ Java 编译器输入的指令流基本上是一种==基于栈的指令集架构=
         - 某线程调用Runtime类或System类的exit()方法，或Runtime类的halt()方法，并且Java安全管理器也允许这次exit()或halt()操作。
             - `Runtime`是JVM在运行时的数据区，使用的设计模式是==单例模式==,使用==饿汉式==
         - 除此之外，JNI（Java Native Interface）规范描述了用JNI Invocation API来加载或卸载 Java虚拟机时，Java虚拟机的退出情况。
-            
+          
 ```java
 public class Runtime {
     private static Runtime currentRuntime = new Runtime();
