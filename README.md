@@ -8,5 +8,4 @@
   - [程序计数器](learning-JVM/运行时数据区/程序计数器.md)
   - [虚拟机栈](learning-JVM/运行时数据区/虚拟机栈.md)
   - [堆](learning-JVM/运行时数据区/堆.md)
-  - [堆](learning-JVM/运行时数据区/堆.pdf)
 
